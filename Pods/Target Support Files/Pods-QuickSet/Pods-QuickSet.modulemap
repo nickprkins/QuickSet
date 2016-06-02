@@ -1,0 +1,6 @@
+framework module Pods_QuickSet {
+  umbrella header "Pods-QuickSet-umbrella.h"
+
+  export *
+  module * { export * }
+}
