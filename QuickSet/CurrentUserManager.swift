@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import Firebase
 
 class CurrentUserManager: AnyObject {
     var uID : String = ""
+    var ref : AnyObject = FIRDatabase.database().reference()
+    
     
     static let sharedInstance = CurrentUserManager()
     

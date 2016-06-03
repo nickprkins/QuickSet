@@ -14,12 +14,12 @@
 		8C020EB61CFE06400074B209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C020EB41CFE06400074B209 /* LaunchScreen.storyboard */; };
 		8C4389A61CFF5FAC00D3D57F /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4389A51CFF5FAC00D3D57F /* HomeTableViewController.swift */; };
 		8C4389A81CFF739100D3D57F /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4389A71CFF739100D3D57F /* NotificationsTableViewController.swift */; };
-		8C4389AA1CFFB36800D3D57F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4389A91CFFB36800D3D57F /* LaunchScreenViewController.swift */; };
 		8C4389AC1CFFD2C100D3D57F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C4389AB1CFFD2C100D3D57F /* GoogleService-Info.plist */; };
 		8C6E776A1CFE342000468C10 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E77691CFE342000468C10 /* SWRevealViewController.m */; };
 		8C6E776C1CFE395400468C10 /* OurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E776B1CFE395400468C10 /* OurViewController.swift */; };
 		8CC2174E1D0087BE000B72EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2174D1D0087BE000B72EF /* LoginViewController.swift */; };
 		8CC217501D01CD8B000B72EF /* CurrentUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC2174F1D01CD8B000B72EF /* CurrentUserManager.swift */; };
+		8CC217541D01F924000B72EF /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC217531D01F924000B72EF /* SideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		8C020EB71CFE06400074B209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4389A51CFF5FAC00D3D57F /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8C4389A71CFF739100D3D57F /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
-		8C4389A91CFFB36800D3D57F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8C4389AB1CFFD2C100D3D57F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C6E77671CFE342000468C10 /* QuickSet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickSet-Bridging-Header.h"; sourceTree = "<group>"; };
 		8C6E77681CFE342000468C10 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		8C6E776B1CFE395400468C10 /* OurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurViewController.swift; sourceTree = "<group>"; };
 		8CC2174D1D0087BE000B72EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CC2174F1D01CD8B000B72EF /* CurrentUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserManager.swift; sourceTree = "<group>"; };
+		8CC217531D01F924000B72EF /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		CE756306BE28C2803154142E /* Pods-QuickSet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickSet.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickSet/Pods-QuickSet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +88,7 @@
 			children = (
 				8C020EAB1CFE06400074B209 /* AppDelegate.swift */,
 				8C020EAF1CFE06400074B209 /* Main.storyboard */,
+				8CC217531D01F924000B72EF /* SideMenuTableViewController.swift */,
 				8CC2174F1D01CD8B000B72EF /* CurrentUserManager.swift */,
 				8CC2174D1D0087BE000B72EF /* LoginViewController.swift */,
 				8C4389A71CFF739100D3D57F /* NotificationsTableViewController.swift */,
@@ -95,7 +96,6 @@
 				8C6E776B1CFE395400468C10 /* OurViewController.swift */,
 				8C020EB21CFE06400074B209 /* Assets.xcassets */,
 				8C020EB41CFE06400074B209 /* LaunchScreen.storyboard */,
-				8C4389A91CFFB36800D3D57F /* LaunchScreenViewController.swift */,
 				8C020EB71CFE06400074B209 /* Info.plist */,
 				8C4389AB1CFFD2C100D3D57F /* GoogleService-Info.plist */,
 			);
@@ -249,9 +249,9 @@
 				8CC2174E1D0087BE000B72EF /* LoginViewController.swift in Sources */,
 				8C020EAC1CFE06400074B209 /* AppDelegate.swift in Sources */,
 				8C4389A81CFF739100D3D57F /* NotificationsTableViewController.swift in Sources */,
+				8CC217541D01F924000B72EF /* SideMenuTableViewController.swift in Sources */,
 				8C6E776A1CFE342000468C10 /* SWRevealViewController.m in Sources */,
 				8C6E776C1CFE395400468C10 /* OurViewController.swift in Sources */,
-				8C4389AA1CFFB36800D3D57F /* LaunchScreenViewController.swift in Sources */,
 				8C4389A61CFF5FAC00D3D57F /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

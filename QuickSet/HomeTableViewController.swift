@@ -24,7 +24,6 @@ class HomeTableViewController: UITableViewController {
         
         self.userID = CurrentUserManager.sharedInstance.uID
         
-        print(userID)
         
         // disable selecting the cells.
         homeTableView.allowsSelection = false

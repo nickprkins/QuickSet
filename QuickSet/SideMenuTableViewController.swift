@@ -1,45 +1,23 @@
 //
-//  NotificationsTableViewController.swift
+//  SideMenuTableViewController.swift
 //  QuickSet
 //
-//  Created by Nick Perkins on 6/1/16.
+//  Created by Nick Perkins on 6/3/16.
 //  Copyright © 2016 Nick Perkins. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class NotificationsTableViewController: UITableViewController {
-    @IBOutlet var viewAllButton: UIButton!
-    @IBOutlet var notificationTableView: UITableView!
-    @IBOutlet var notifyCell2: UITableViewCell!
-    @IBOutlet var notification1Cell: UITableViewCell!
-    @IBOutlet var viewAllCell: UITableViewCell!
-    var notifyDict: [String: String]!
+class SideMenuTableViewController: UITableViewController {
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        notificationTableView.allowsSelection = true
-        
-        viewAllButton.layer.borderColor = UIColor.lightGrayColor().CGColor
-        viewAllButton.layer.borderWidth = 1
-        viewAllButton.layer.cornerRadius = 10
-        
-        notification1Cell.layer.borderWidth = 0.5
-        notification1Cell.layer.borderColor = UIColor.lightGrayColor().CGColor
-        notifyCell2.layer.borderWidth = 0.5
-        notifyCell2.layer.borderColor = UIColor.lightGrayColor().CGColor
-        viewAllCell.layer.borderWidth = 0.5
-        viewAllCell.layer.borderColor = UIColor.lightGrayColor().CGColor
-        
-    }
-    
-    @IBAction func viewAllButtonPressed(sender: AnyObject) {
-        
-        print("You tapped the button bud!")
-        
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,35 +26,26 @@ class NotificationsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+//
 //    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
-//        return 1
+//        return 0
 //    }
 //
 //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        // #warning Incomplete implementation, return the number of rows
-//        
-//        CurrentUserManager.sharedInstance.ref.child("notifications").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
-//            self.notifyDict = snapshot.value as? [String : String]
-//            
-//            })
-//        
-//        
-//        return notifyDict.count
+//        return 0
 //    }
+//
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-    
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-//
-//        // Configure the cell...
-//        
-//        
-//
-//        return cell
-//    }
-    
+        // Configure the cell...
+
+        return cell
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

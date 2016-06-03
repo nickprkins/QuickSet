@@ -35,13 +35,19 @@ class LoginViewController: UIViewController {
         FIRDatabase.database().persistenceEnabled = true
         view.backgroundColor = UIColor.redColor()
         
+        
+        
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if user != nil {
                 // User is signed in.
                 CurrentUserManager.sharedInstance.uID = user!.uid
                 self.performSegueWithIdentifier("AllowUserToLoginSegue", sender: self)
+                print("User already has an active login session")
             } else {
                 // No user is signed in.
+                print("User needs to sign in.")
+                self.passwordTextField.text = ""
+                self.emailTextField.text = ""
             }
         }
         
@@ -58,12 +64,17 @@ class LoginViewController: UIViewController {
                 print("User was unable to sign in.")
             }else{
                 self.uid = user!.uid
-                print(user?.uid)
-                print(self.uid)
                 CurrentUserManager.sharedInstance.uID = user!.uid
                 self.performSegueWithIdentifier("AllowUserToLoginSegue", sender: self)
             }
         }
+        
+    }
+    
+    @IBAction func logOutUnWind(segue: UIStoryboardSegue){
+        
+        try! FIRAuth.auth()?.signOut()
+        print("User has logged out successfully!")
         
     }
 
