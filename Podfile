@@ -6,5 +6,7 @@ target 'QuickSet' do
   use_frameworks!
 
   # Pods for QuickSet
-  pod 'Firebase'	
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'	
 end

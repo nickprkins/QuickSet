@@ -28,12 +28,22 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
-    let ref = FIRApp(named: "https://project-7099863810017503044.firebaseio.com/")
+    var uid: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        FIRDatabase.database().persistenceEnabled = true
         view.backgroundColor = UIColor.redColor()
+        
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if user != nil {
+                // User is signed in.
+                CurrentUserManager.sharedInstance.uID = user!.uid
+                self.performSegueWithIdentifier("AllowUserToLoginSegue", sender: self)
+            } else {
+                // No user is signed in.
+            }
+        }
         
     }
     
@@ -41,11 +51,21 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonPressed(sender: AnyObject) {
         
         //Authenticate and login the user in Firebase
-        
+        FIRAuth.auth()?.signInWithEmail(emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                //error
+                print("User was unable to sign in.")
+            }else{
+                self.uid = user!.uid
+                print(user?.uid)
+                print(self.uid)
+                CurrentUserManager.sharedInstance.uID = user!.uid
+                self.performSegueWithIdentifier("AllowUserToLoginSegue", sender: self)
+            }
+        }
         
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

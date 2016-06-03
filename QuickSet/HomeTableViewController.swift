@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeTableViewController: UITableViewController {
 
@@ -16,9 +17,14 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet var victoryView: UIView!
     @IBOutlet var rankView: UIView!
     @IBOutlet var losesView: UIView!
+    var userID : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.userID = CurrentUserManager.sharedInstance.uID
+        
+        print(userID)
         
         // disable selecting the cells.
         homeTableView.allowsSelection = false
@@ -49,6 +55,10 @@ class HomeTableViewController: UITableViewController {
         rankView.layer.borderColor = UIColor.lightGrayColor().CGColor
         rankView.layer.cornerRadius = 10
 
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
 
